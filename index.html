@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1 class="header-one">Look at that cucumber!</h1>
+    <h1 class="header-two">That cucumber is amazing!</h1>
+    <div class="eggplant">🍆</div>
+    <audio
+      src="https://www.fesliyanstudios.com/download-link.php?src=i&id=1879"
+      autoplay
+      loop
+    />
+    <style>
+      body {
+        background-color: #000;
+      }
+      .header-one {
+        font-family: Impact, sans-serif;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        transform: rotate(20deg);
+        color: green;
+        animation-name: blink;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      .header-two {
+        font-family: Impact, sans-serif;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 55%;
+        left: 15%;
+        transform: rotate(-20deg);
+        color: purple;
+        animation-name: blink;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+      }
+
+      .eggplant {
+        font-size: 15rem;
+        transform-origin: top left;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-name: cucify;
+      }
+      @keyframes cucify {
+        from {
+          filter: hue-rotate(0);
+          transform: rotate(0deg);
+        }
+        to {
+          filter: hue-rotate(180deg);
+          transform: rotate(-20deg);
+        }
+      }
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        55% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </body>
+</html>
